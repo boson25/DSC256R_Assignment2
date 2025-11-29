@@ -160,8 +160,8 @@ print(f"TF-IDF feature matrix shape: {text_features.shape}")
 
  **DO NOT commit raw data files to Git!** They are in `.gitignore`  
  **DO commit** small files like `user_to_idx.pkl` and `item_to_idx.pkl`  
-✅ Everyone uses the same train/test split (seed=42) for fair comparison  
-✅ Mappings ensure consistent indexing across all models  
+     Everyone uses the same train/test split (seed=42) for fair comparison  
+     Mappings ensure consistent indexing across all models  
 
 ---
 
@@ -187,5 +187,3 @@ print(f"TF-IDF feature matrix shape: {text_features.shape}")
 - **Paper:** Hou, Y., et al. (2024). "Bridging Language and Items for Retrieval and Recommendation"
 
 ---
-
-**Last Updated:** November 28, 2024
