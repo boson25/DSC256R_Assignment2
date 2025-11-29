@@ -78,6 +78,23 @@ Preprocessed data is available in `data/processed/`
 - Item mean predictor
 - User + Item bias model
 
+### Baseline Results
+We evaluated four baseline models to establish reference performance before moving to more advanced methods. All evaluations were done on the processed train/test split using MSE.
+
+| Model | Test MSE |
+|-------|----------|
+| Global Mean | 1.559 |
+| User Mean | 1.912 |
+| Item Mean | 1.987 |
+| **Bias Model (User + Item Bias)** | **1.437** |
+
+**Summary:**
+- The **global mean** provides a simple starting point.
+- **User mean** and **item mean** baselines reflect individual tendencies, but perform worse.
+- The **bias model** captures both user and item deviations from the global average and achieves the lowest error among all baselines.
+- This model will serve as the primary reference for evaluating more complex models in later stages.
+
+
 **Advanced Models:**
 - Matrix factorization with SGD
 - Regularized latent factor models

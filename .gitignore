@@ -3,6 +3,7 @@ venv/
 env/
 *.pyc
 __pycache__/
+.venv/
 
 #Data files (too large for GitHub)
 data/raw/*
