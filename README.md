@@ -21,8 +21,8 @@
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/CSE258_Assignment2.git
-cd CSE258_Assignment2
+git clone https://github.com/YOUR_USERNAME/DSR256R_Assignment2.git
+cd DSC256R_Assignment2
 ```
 
 ### 2. Set Up Environment
