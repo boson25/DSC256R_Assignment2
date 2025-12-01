@@ -17,13 +17,13 @@ class MatrixFactorization:
         self.k = k
         self.lr = lr
         self.reg = reg
-        self.epochs = epochs
+        self.epoch = epoch
 
         # Initialize latent factors (P for users, Q for items)
         self.P = np.random.normal(0, 0.1, (num_users, k))
         self.Q = np.random.normal(0, 0.1, (num_items, k))
 
-    def predict(self, user, item)L
+    def predict(self, user, item):
         """Predict rating for user-item pair."""
         return np.dot(self.P[user], self.Q[item])
 
@@ -33,7 +33,7 @@ class MatrixFactorization:
         SGD Optimization
         """
 
-        for ep in range(self.epochs):
+        for ep in range(self.epoch):
             np.random.shuffle(train_data)
             total_loss = 0
 
@@ -47,7 +47,7 @@ class MatrixFactorization:
 
                 total_loss += err**2 + self.reg * (np.linalg.norm(self.P[u])**2 + np.linalg.norm(self.Q[i])**2)
 
-            print(f"[Epoch {ep+1}/{self.epochs}] Loss: {total_loss.4f}")
+            print(f"[Epoch {ep+1}/{self.epoch}] Loss: {total_loss:.4f}")
 
     def evaluate(self, test_data):
         """Compute MSE on test set"""
